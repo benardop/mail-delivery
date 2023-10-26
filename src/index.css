@@ -1,13 +1,34 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+.mail-delivery {
+  border: 3px solid #ccc;
+  width: 760px;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 25px;
+  padding: 15px;
+  font-size: 14px;
+  font-family: "Helvetica" sans-serif Arial;
+  position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.sender-address {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.receiver-address {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  align-self: center;
+}
+
+.stamp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
 }
