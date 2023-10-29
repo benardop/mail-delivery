@@ -46,13 +46,11 @@ function ReceiverName() {
     <span>Alex Doe</span>
   )
 }
-
 function ReceiverStreet() {
   return (
     <span>Gold Park 1000</span>
   )
 }
-
 function ReceiverState() {
   return (
     <span>California-CA</span>
