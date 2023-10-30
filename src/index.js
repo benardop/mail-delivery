@@ -22,7 +22,6 @@ function MailDelivery() {
     </div>
   )
 }
-
 function SenderName() {
   return (
     <span>John Doe</span>
@@ -34,7 +33,6 @@ function SenderStreet() {
     <span>North Street 100</span>
   )
 }
-
 function SenderState() {
   return (
     <span>California-CA</span>
@@ -56,7 +54,6 @@ function ReceiverState() {
     <span>California-CA</span>
   )
 }
-
 function PostageStamp() {
   return (
     <img
