@@ -34,11 +34,13 @@ function SenderStreet() {
     <span>North Street 100</span>
   )
 }
+
 function SenderState() {
   return (
     <span>California-CA</span>
   )
 }
+
 function ReceiverName() {
   return (
     <span>Alex Doe</span>
@@ -50,11 +52,13 @@ function ReceiverStreet() {
     <span>Gold Park 1000</span>
   )
 }
+
 function ReceiverState() {
   return (
     <span>California-CA</span>
   )
 }
+
 function PostageStamp() {
   return (
     <img
@@ -63,6 +67,7 @@ function PostageStamp() {
       alt='Stamp' />
   )
 }
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
