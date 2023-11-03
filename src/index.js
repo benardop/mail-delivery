@@ -1,77 +1,52 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import stamp from './image/stamp.jpg';
+//import stamp from './image/stamp.jpg';
 import './index.css';
 
-function MailDelivery() {
+function AddressLabel({person}) {
   return (
-    <div className='mail-delivery'>
-      <div className='sender-address'>
-      <SenderName />
-      <SenderStreet />
-      <SenderState />
-      </div>
-      <div className='receiver-address'>
-      <ReceiverName />
-      <ReceiverStreet />
-      <ReceiverState />
-      </div>
-      <div className='stamp'>
-        <PostageStamp />
-      </div>
+   <div className='address-label'>
+      <Name text={person.name} />
+      <Address streetName={person.address} />
+      <State stateName={person.state} />
+   </div> 
+  )
+}
+
+function Name({text}) {
+  return (
+    <div>
+      {text}
     </div>
   )
 }
 
-function SenderName() {
+function Address({streetName}) {
   return (
-    <span>John Doe</span>
+    <div>
+      {streetName}
+    </div>
   )
 }
 
-function SenderStreet() {
+function State({stateName}) {
   return (
-    <span>North Street 100</span>
+    <div>
+      {stateName}
+    </div>
   )
 }
 
-function SenderState() {
-  return (
-    <span>California-CA</span>
-  )
-}
-
-function ReceiverName() {
-  return (
-    <span>Alex Doe</span>
-  )
-}
-
-function ReceiverStreet() {
-  return (
-    <span>Gold Park 1000</span>
-  )
-}
-
-function ReceiverState() {
-  return (
-    <span>California-CA</span>
-  )
-}
-
-function PostageStamp() {
-  return (
-    <img
-      src={stamp}
-      className='stamp-image'
-      alt='Stamp' />
-  )
-}
+var testPerson = {
+  name: "John Doe",
+  address: "Wood lane 100-00900",
+  state:"Boston MA, 02118"
+};
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MailDelivery />
+    <AddressLabel person={testPerson}/>
   </React.StrictMode>
 );
 
