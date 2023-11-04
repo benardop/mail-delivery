@@ -12,7 +12,6 @@ function AddressLabel({person}) {
    </div> 
   )
 }
-
 function Name({text}) {
   return (
     <div>
@@ -20,7 +19,6 @@ function Name({text}) {
     </div>
   )
 }
-
 function Address({streetName}) {
   return (
     <div>
