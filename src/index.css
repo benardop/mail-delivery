@@ -1,8 +1,8 @@
 
-.address-lable {
+.address-label {
   border: 3px solid #ccc;
   width: 760px;
-  min-height: 170px;
+  min-height: 270px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -16,17 +16,17 @@
 .sender-address {
   display: flex;
   flex-direction: column;
-  font-weight: bold;
+  align-items: flex-start;
 }
 
 .receiver-address {
   display: flex;
   flex-direction: column;
-  font-weight: bold;
   align-self: center;
+  margin-top: 60px;
 }
 
-.stamp {
+.postage-stamp {
   position: absolute;
   top: 0;
   right: 0;
@@ -38,4 +38,7 @@
   height: 60px;
   border-radius: 5px;
   margin-left: auto;
+}
+.name, .street, .state {
+  font-weight: bold;
 }
