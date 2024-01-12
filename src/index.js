@@ -6,7 +6,6 @@ function OneTimeButton({onClick}) {
  const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
-
     onClick();
 
     setClicked(true);
@@ -18,7 +17,6 @@ function OneTimeButton({onClick}) {
         </button>
       );
 }
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
