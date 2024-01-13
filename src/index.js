@@ -17,6 +17,7 @@ function OneTimeButton({onClick}) {
         </button>
       );
 }
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
