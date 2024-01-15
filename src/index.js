@@ -10,19 +10,18 @@ function OneTimeButton({onClick}) {
 
     setClicked(true);
   };
-
-      return(
-        <button onClick={handleClick} disabled={clicked}>
-          You can only click me once
-        </button>
-      );
+    return(
+      <button onClick={handleClick} disabled={clicked}>
+        You can only click me once
+      </button>
+    );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <>
+  <div>
     <OneTimeButton onClick={()=> alert('Hi')} />
-  </>
+  </div>
 );
 
