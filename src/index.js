@@ -1,27 +1,46 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom/client';
-import { useState } from 'react';
 
-function OneTimeButton({onClick}) {
- const [clicked, setClicked] = useState(false);
+class CountingParent extends Component {
+ constructor(props) {
+  super(props);
 
-  const handleClick = () => {
-    onClick();
+  this.state = {
+    actionCount: 0
+  }
 
-    setClicked(true);
-  };
+  this.handleAction = this.handleAction.bind(this);
+ }
 
-    return(
-      <button onClick={handleClick} disabled={clicked}>
-        You can only click me once
-      </button>
-    );
+ handleAction(action) {
+  console.log("Child says", action)
+  this.setState({
+    actionCount: this.state.actionCount + 1
+  })
+ }
+
+ render(){
+  return(
+    <div>
+      <Child onAction={this.handleAction} />
+      <p>Clicked counter {this.state.actionCount} times!</p>
+    </div>
+  )
+ }
+}
+
+function Child({onAction}) {
+  return(
+    <button onClick={onAction}>
+      Click Me!
+    </button>
+  )
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
-    <OneTimeButton onClick={()=> alert('Hi')} />
+    <CountingParent />
   </div>
 );
 
