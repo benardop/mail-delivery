@@ -10,19 +10,31 @@ class CountingParent extends Component {
   }
 
   this.handleAction = this.handleAction.bind(this);
+  this.resetButton = this.resetButton.bind(this);
  }
 
- handleAction(action) {
-  console.log("Child says", action)
+ handleAction() {
   this.setState({
     actionCount: this.state.actionCount + 1
-  })
+  },function(){    
+  });
+ }
+
+ resetButton(){
+   this.setState((state, props) => {
+    return {
+      actionCount: state.actionCount - 1
+    }
+   }
+  )
  }
 
  render(){
   return(
     <div>
       <Child onAction={this.handleAction} />
+      &nbsp;
+      <Reset onAction={this.resetButton}/>
       <p>Clicked counter {this.state.actionCount} times!</p>
     </div>
   )
@@ -32,7 +44,15 @@ class CountingParent extends Component {
 function Child({onAction}) {
   return(
     <button onClick={onAction}>
-      Click Me!
+      Set Count!
+    </button>
+  )
+}
+
+function Reset({onAction}) {
+  return(
+    <button onClick={onAction}>
+      Reset Count!
     </button>
   )
 }
