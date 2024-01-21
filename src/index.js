@@ -12,7 +12,6 @@ class CountingParent extends Component {
   this.handleAction = this.handleAction.bind(this);
   this.resetButton = this.resetButton.bind(this);
  }
-
  handleAction() {
   this.setState({
     actionCount: this.state.actionCount + 1
@@ -27,8 +26,7 @@ class CountingParent extends Component {
     }
    }
   )
- }
-
+  }
  render(){
   return(
     <div>
