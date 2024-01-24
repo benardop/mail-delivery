@@ -3,13 +3,11 @@ import ReactDOM from 'react-dom/client';
 import { useState } from 'react';
 
 function CountingParent() {
-
   const [count, setCount] = useState(0);
 
   function handleAction() {
   setCount(count + 1);
  }
-
  return(
   <button onClick={handleAction}>
     Clicked { count } times
