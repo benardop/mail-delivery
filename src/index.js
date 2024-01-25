@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import { useState } from 'react';
 
-function CountingParent() {
-  const [count, setCount] = useState(0);
+function OneTimeButton({onClick})  {
+  
+  const [clicked, setClicked] = useState(false);
 
-  function handleAction() {
-  setCount(count + 1);
- }
- return(
-  <button onClick={handleAction}>
-    Clicked { count } times
-  </button>
- )
+    const handleClick = () => {
+      onClick();
+
+      setClicked(true);
+    }
+
+          return(
+        <button onClick={handleClick} disabled={clicked}>
+        Just click once!
+        </button>
+      )
  
  }
  
@@ -21,7 +24,7 @@ function CountingParent() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
-    <CountingParent />
+    <OneTimeButton onClick={() => alert('Hi')} />
   </div>
 );
 
