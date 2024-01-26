@@ -10,7 +10,6 @@ function OneTimeButton({onClick})  {
 
       setClicked(true);
     }
-
       return(
         <button onClick={handleClick} disabled={clicked}>
         Just click once!
@@ -18,8 +17,6 @@ function OneTimeButton({onClick})  {
       )
  
  }
- 
-
  
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
